@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<title>Actor</title>
+<div th:replace="/fragments/head"></div>
+<link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div th:replace="fragments/navbar"></div>
+
+
+		<br><br>
+
+		<h2 class="trend">Actor Features</h2>
+		<br>
+
+		<div id="multi-item-example"
+			class="carousel slide carousel-multi-item" data-ride="carousel"
+			data-interval="7000">
+
+			<div class="controls-top">
+				<a class="btn-primary" href="#multi-item-example" data-slide="prev"></a>
+				<a class="btn-primary" href="#multi-item-example" data-slide="next"></a>
+			</div>
+
+			<ol class="carousel-indicators">
+				<li data-target="#multi-item-example" data-slide-to="0"
+					class="active"></li>
+				<li data-target="#multi-item-example" data-slide-to="1"></li>
+				<li data-target="#multi-item-example" data-slide-to="2"></li>
+			</ol>
+
+
+			<div class="carousel-inner" role="listbox">
+
+
+				<div class="carousel-item active">
+
+					<div class="col-md-3" style="float: left">
+						<div class="card mb-2">
+
+							<a href="https://www.imdb.com/name/nm2933757/?ref_=nv_sr_srsg_0"
+								target="_blank"><img class="card-img-top"
+								src="/images/gal.jpeg" alt="gal"></a>
+							<div class="card-body">
+								<h6 class="card-title">Gal Gadot</h6>
+								<p class="card-text">
+									<small class="text-muted">Wonder Woman</small>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" style="float: left">
+						<div class="card mb-2">
+							<a href="https://www.imdb.com/name/nm0000226/?ref_=nv_sr_srsg_0"
+								target="_blank"><img class="card-img-top"
+								src="/images/smith.jpeg" alt="will"></a>
+							<div class="card-body">
+								<h6 class="card-title">Will Smith</h6>
+								<p class="card-text">
+									<small class="text-muted">The Pursuit of Happiness</small>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" style="float: left">
+						<div class="card mb-2">
+							<a href="https://www.imdb.com/name/nm0002127/?ref_=nv_sr_srsg_0"
+								target="_blank"><img class="card-img-top"
+								src="/images/mariska.jpeg" alt="mariska"></a>
+							<div class="card-body">
+								<h6 class="card-title">Mariska Hargitay</h6>
+								<p class="card-text">
+									<small class="text-muted">Law and Order: SVU</small>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" style="float: left">
+						<div class="card mb-2">
+							<a href="https://www.imdb.com/name/nm0262635/?ref_=nv_sr_srsg_0"
+								target="_blank"><img class="card-img-top"
+								src="/images/chris.jpeg" alt="chris"></a>
+							<div class="card-body">
+								<h6 class="card-title">Chris Evans</h6>
+								<p class="card-text">
+									<small class="text-muted">Avengers</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="carousel-item">
+
+					<div class="col-md-3" style="float: left">
+						<div class="card mb-2">
+							<a href="https://www.imdb.com/name/nm0940362/?ref_=nv_sr_srsg_0"
+								target="_blank"><img class="card-img-top"
+								src="/images/woodley.jpeg" alt="shailene"></a>
+							<div class="card-body">
+								<h6 class="card-title">Shailene Woodley</h6>
+								<p class="card-text">
+									<small class="text-muted">Divergent</small>
+								</p>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" style="float: left">
+						<div class="card mb-2">
+							<a href="https://www.imdb.com/name/nm1500155/?ref_=nv_sr_srsg_0"
+								target="_blank"><img class="card-img-top"
+								src="/images/pattinosn.jpeg" alt="robert"></a>
+							<div class="card-body">
+								<h6 class="card-title">Robert Pattinson</h6>
+								<p class="card-text">
+									<small class="text-muted">Tenet</small>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" style="float: left">
+						<div class="card mb-2">
+							<a href="https://www.imdb.com/name/nm0690186/?ref_=nv_sr_srsg_0"
+								target="_blank"><img class="card-img-top"
+								src="/images/pompeo.jpeg" alt="ellen"></a>
+							<div class="card-body">
+								<h6 class="card-title">Ellen Pompeo</h6>
+								<p class="card-text">
+									<small class="text-muted">Grey's Anatomy</small>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" style="float: left">
+						<div class="card mb-2">
+							<a href="https://www.imdb.com/name/nm0000158/?ref_=fn_al_nm_1"
+								target="_blank"><img class="card-img-top"
+								src="/images/hanks.jpeg" alt="tom"></a>
+							<div class="card-body">
+								<h6 class="card-title">Tom Hanks</h6>
+								<p class="card-text">
+									<small class="text-muted">New of the World</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="col-md-3" style="float: left">
+			<div class="card mb-2">
+
+				<a href="https://www.imdb.com/name/nm5896355/?ref_=nv_sr_srsg_0"
+					target="_blank"><img class="card-img-top"
+					src="/images/ann.jpeg" alt="ann"></a>
+				<div class="card-body">
+					<h6 class="card-title">Anya Taylor-Joy</h6>
+					<p class="card-text">
+						<small class="text-muted">Queen's Gambit</small>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3" style="float: left">
+			<div class="card mb-2">
+				<a href="https://www.imdb.com/name/nm0056187/?ref_=nv_sr_srsg_0"
+					target="_blank"><img class="card-img-top"
+					src="/images/sacha.jpeg" alt="sacha"></a>
+				<div class="card-body">
+					<h6 class="card-title">Sacha Baron Cohen</h6>
+					<p class="card-text">
+						<small class="text-muted">The Trial of the Chicago 7</small>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3" style="float: left">
+			<div class="card mb-2">
+				<a href="https://www.imdb.com/name/nm1856097/?ref_=nv_sr_srsg_0"
+					target="_blank"><img class="card-img-top" src="/images/cho.png"
+					alt="cho"></a>
+				<div class="card-body">
+					<h6 class="card-title">Yeo-jeong Cho</h6>
+					<p class="card-text">
+						<small class="text-muted">Parasite</small>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-md-3" style="float: left">
+			<div class="card mb-2">
+				<a href="https://www.imdb.com/name/nm0004937/?ref_=fn_al_nm_1"
+					target="_blank"><img class="card-img-top"
+					src="/images/jamie.jpeg" alt="jamie"></a>
+				<div class="card-body">
+					<h6 class="card-title">Jamie Foxx</h6>
+					<p class="card-text">
+						<small class="text-muted">Soul</small>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="col-md-3" style="float: left">
+			<br>
+			<div class="card mb-2">
+
+				<a href="https://www.imdb.com/name/nm4271336/?ref_=nv_sr_srsg_0"
+					target="_blank"><img class="card-img-top"
+					src="/images/shameik.jpeg" alt="shameik"></a>
+				<div class="card-body">
+					<h6 class="card-title">Shameik Moore</h6>
+					<p class="card-text">
+						<small class="text-muted">Spiderman</small>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-md-3" style="float: left">
+
+			<br>
+			<div class="card mb-2">
+				<a href="https://www.imdb.com/name/nm0177896/?ref_=nv_sr_srsg_0"
+					target="_blank"><img class="card-img-top"
+					src="/images/bradley.jpeg" alt="bradley"></a>
+				<div class="card-body">
+					<h6 class="card-title">Bradley Cooper</h6>
+					<p class="card-text">
+						<small class="text-muted">A Star is Born</small>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3" style="float: left">
+			<br>
+			<div class="card mb-2">
+				<a href="https://www.imdb.com/name/nm1089991/?ref_=nv_sr_srsg_0"
+					target="_blank"><img class="card-img-top"
+					src="/images/tom.jpeg" alt="tom"></a>
+				<div class="card-body">
+					<h6 class="card-title">Tom Hiddlestone</h6>
+					<p class="card-text">
+						<small class="text-muted">War Horse</small>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3" style="float: left">
+			<br>
+			<div class="card mb-2">
+				<a href="https://www.imdb.com/name/nm0002907/?ref_=nv_sr_srsg_0"
+					target="_blank"><img class="card-img-top"
+					src="/images/alex.jpeg" alt="alexander"></a>
+				<div class="card-body">
+					<h6 class="card-title">Alexander Skarsgård</h6>
+					<p class="card-text">
+						<small class="text-muted">Godzilla vs. Kong</small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

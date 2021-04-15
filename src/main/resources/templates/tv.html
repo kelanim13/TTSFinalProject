@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<title>TV</title>
+<div th:replace="/fragments/head"></div>
+<link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div th:replace="fragments/navbar"></div>
+
+
+		<br> <br>
+
+		<h2 class="tv">Trending</h2>
+		<br>
+
+		<div id="demo" class="carousel slide" data-ride="carousel"
+			data-interval="0">
+
+
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+			</ul>
+
+			<div class="container carousel-inner no-padding">
+				<div class="carousel-item active">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=BhtDgn31XZo"
+								target="_blank"><img src="/images/ncis.jpg" alt="ncis"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=q1pcpgREQ5c"
+								target="_blank"><img src="/images/grey.jpg" alt="grey"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=O53wYUc_fA4"
+								target="_blank"><img src="/images/svu.jpg" alt="svu"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=9VF4-fyuCeU"
+								target="_blank"><img src="/images/zoey2.jpeg" alt="zoey"></a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=sj9J2ecsSpo"
+								target="_blank"><img src="/images/wandavision.png"
+								alt="wandavision"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=OkTEQwsE8l4"
+								target="_blank"><img src="/images/us2.jpeg" alt="us"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=o_cblVvo5bg"
+								target="_blank"><img src="/images/parenthood.jpeg"
+								alt="parenthood"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=dU_hJscvdXU"
+								target="_blank"><img src="/images/scorpion.png"
+								alt="parenthood"></a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=1F6_VK-Adt0"
+								target="_blank"><img src="/images/gilmore.png" alt="gilmore"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=jbRVoTL5djs"
+								target="_blank"><img src="/images/friends.jpeg"
+								alt="friends"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=ZvMCbzrToAo"
+								target="_blank"><img src="/images/amsterdam.jpeg"
+								alt="amsterdam"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=CDrieqwSdgI"
+								target="_blank"><img src="/images/gambit.jpeg" alt="gambit"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a> <a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+
+		<br> <br>
+		<h2 class="tv">Featured Shows</h2>
+		<br>
+
+
+		<div id="carouselExampleIndicators" class="carousel slide"
+			data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators"
+					data-bs-slide-to="0" class="active" aria-current="true"
+					aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators"
+					data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators"
+					data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<a href="https://www.youtube.com/watch?v=NWbyzIFeya8"
+						target="_blank"><img src="/images/criminal2.jpeg"
+						class="d-block w-100" alt="Criminal"></a>
+				</div>
+				<div class="carousel-item">
+					<a href="https://www.youtube.com/watch?v=iQSHrgjayz8"
+						target="_blank"><img src="/images/falcon.jpeg"
+						class="d-block w-100" alt="Falcon"></a>
+				</div>
+				<div class="carousel-item">
+					<a href="https://www.youtube.com/watch?v=xJ-0Z4AkloY"
+						target="_blank"><img src="/images/grey2.jpeg"
+						class="d-block w-100" alt="grey"></a>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button"
+				data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button"
+				data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+		<br> <br>
+
+		<div class="card">
+			<div class="card-body">
+				<blockquote class="blockquote mb-0">
+					<p class="tv">"We need new heroes. Ones suited for the times
+						we're in. Symbols are nothing without the women and men that give
+						them meaning."</p>
+					<footer class="blockquote-footer">
+						<cite title="Source Title">Sam Wilson: The Falcon and The
+							Winter Soldier</cite>
+					</footer>
+				</blockquote>
+			</div>
+		</div>
+
+		<br>
+		<div th:replace="fragments/bored"></div>
+		<br>
+
+		<div class="card">
+			<div class="card-body">
+				<blockquote class="blockquote mb-0">
+					<p class="tv">"Out of suffering have emerged the strongest
+						souls. The most massive characters are seared with scars."</p>
+					<footer class="blockquote-footer">
+						<cite title="Source Title">Khalil Gibrain: Quoted in
+							Criminal Minds</cite>
+					</footer>
+				</blockquote>
+			</div>
+		</div>
+
+		<br> <br>
+
+		<h2 class="tv">Your List</h2>
+
+
+		<div class="container no-padding">
+			<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="img-pop">
+					<a href="https://www.youtube.com/watch?v=CTD_lAYCS3g"
+						target="_blank"><img src="/images/csi.jpeg" alt="csi"></a>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="img-pop">
+					<a href="https://www.youtube.com/watch?v=sI_M0OhCqhQ"
+						target="_blank"><img src="/images/911.jpeg" alt="911"></a>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="img-pop">
+					<a href="https://www.youtube.com/watch?v=NWbyzIFeya8"
+						target="_blank"><img src="/images/criminal.png" alt="criminal"></a>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="img-pop">
+					<a href="https://www.youtube.com/watch?v=ieHh4U-QYwU"
+						target="_blank"><img src="/images/atypical.jpeg"
+						alt="atypical"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+</body>
+</html>

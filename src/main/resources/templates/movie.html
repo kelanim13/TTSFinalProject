@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<title>Movies</title>
+<div th:replace="/fragments/head"></div>
+<link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="container">
+		<div th:replace="fragments/navbar"></div>
+
+		<br><br>
+		<h2 class="movie">Trending</h2>
+		<br>
+		<div id="demo" class="carousel slide" data-ride="carousel"
+			data-interval="0">
+
+
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+			</ul>
+
+			<div class="container carousel-inner no-padding">
+				<div class="carousel-item active">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=odM92ap8_c0"
+								target="_blank"><img src="/images/godzilla.jpeg" alt="godzilla"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=6hB3S9bIaco"
+								target="_blank"><img src="/images/shawshank.jpeg" alt="shawshank"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=FVb6EdKDBfU"
+								target="_blank"><img src="/images/chicago.jpeg" alt="chicago"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=XW2E2Fnh52w"
+								target="_blank"><img src="/images/wonder.jpeg" alt="wonder woman"></a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=xOsLIiBStEs"
+								target="_blank"><img src="/images/soul2.jpeg" alt="soul"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=xi-1NchUqMA"
+								target="_blank"><img src="/images/knives.jpeg" alt="knives"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=g4Hbz2jLxvQ"
+								target="_blank"><img src="/images/spider.jpeg" alt="spider"></a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="img-pop">
+							<a href="https://www.youtube.com/watch?v=vM-Bja2Gy04"
+								target="_blank"><img src="/images/justice.jpeg" alt="justice"></a>
+						</div>
+					</div>
+				</div>
+
+
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a> <a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+			</div>
+			
+			<br><br>
+			
+			<div class="card">
+				<div class="card-body">
+					<blockquote class="blockquote mb-0">
+						<p class="spider">"When I Feel Alone, Like No One Understands What I'm Going Through, 
+						    I Remember My Friends Who Get It. I Never Thought I'd Be Able To Do Any Of This Stuff, But I Can. 
+						    Anyone Can Wear The Mask. You Could Wear The Mask."</p>
+						<footer class="blockquote-footer">
+						<br>
+							<cite title="Source Title">Miles Morales: Spider-Man: Into
+								the Spider Verse</cite>
+						</footer>
+					</blockquote>
+				</div>
+			</div>
+			
+			
+			<br><br>
+			<h2 class="movie">Featured Movies</h2>
+			<br>
+
+
+			<div id="carouselExampleIndicators" class="carousel slide"
+				data-bs-ride="carousel">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="0" class="active" aria-current="true"
+						aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<a href="https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+							target="_blank"><img src="/images/avengers.jpeg"
+							class="d-block w-100" alt="Avengers"></a>
+					</div>
+					<div class="carousel-item">
+						<a href="https://www.youtube.com/watch?v=uC-_Gon2p9M"
+							target="_blank"><img src="/images/green.jpeg"
+							class="d-block w-100" alt="Green Book"></a>
+					</div>
+					<div class="carousel-item">
+						<a href="https://www.youtube.com/watch?v=hHahjuhCvLc"
+							target="_blank"><img src="/images/wonder2.jpeg"
+							class="d-block w-100" alt="Wonder Woman"></a>
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button"
+					data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button"
+					data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+
+			<br><br>
+
+			<div th:replace="fragments/new"></div>
+
+			<br> 
+			
+			<div class="card">
+				<div class="card-body">
+					<blockquote class="blockquote mb-0">
+						<p class="spider">"You know what kind of plan never fails? No plan. No plan at all. You know why? Because life cannot be planned."</p>
+						<footer class="blockquote-footer">
+							<cite title="Source Title">Ki-taek: Parasite</cite>
+						</footer>
+					</blockquote>
+				</div>
+			</div>
+			
+			<br><br>
+
+			<h2 class="movie">Top Rated Movies</h2>
+
+			<br>
+
+			<div class="container no-padding">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+					<div class="img-pop">
+						<a href="https://www.youtube.com/watch?v=1VIZ89FEjYI"
+							target="_blank"><img src="/images/raya.jpeg" alt="raya"></a>
+					</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+					<div class="img-pop">
+						<a href="https://www.youtube.com/watch?v=zTZDb_iKooI"
+							target="_blank"><img src="/images/news.jpeg" alt="news"></a>
+					</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+					<div class="img-pop">
+						<a href="https://www.youtube.com/watch?v=5xH0HfJHsaY"
+							target="_blank"><img src="/images/parasite2.jpeg" alt="parasite"></a>
+					</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+					<div class="img-pop">
+						<a href="https://www.youtube.com/watch?v=L3pk_TBkihU"
+							target="_blank"><img src="/images/tenet.jpeg" alt="tenet"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<br><br>
+</body>
+</html>

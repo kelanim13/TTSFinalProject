@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<title>Sign up</title>
+<div th:replace="/fragments/head"></div>
+<link th:href="@{/main.css}" rel="stylesheet" />
+
+</head>
+<body>
+
+	<div class="container">
+		<div th:replace="fragments/navbar"></div>
+
+		<div class="container">
+
+			<br>
+			<h2 class="signup">Sign up</h2>
+			<br>
+
+			<div th:if="${success}">
+				<h2>Sign up successful!</h2>
+				<form th:action="@{/login}" method="get">
+					<button class="btn btn-md btn-success btn-block" name="login"
+						value="login" type="submit"></button>
+				</form>
+			</div>
+
+			<div th:unless="${success}">
+				<form th:action="@{/signup}" th:object="${user}" method="post"
+					autocomplete="off">
+					<div class="form-group">
+						<label th:if="${#fields.hasErrors('firstName')}"
+							th:errors="*{firstName}" class="validation-message"></label> <input
+							type="text" th:field="*{firstName}" placeholder="First Name"
+							class="form-control" />
+					</div>
+					<br>
+					<div class="form-group">
+						<label th:if="${#fields.hasErrors('lastName')}"
+							th:errors="*{lastName}" class="validation-message"></label> <input
+							type="text" th:field="*{lastName}" placeholder="Last Name"
+							class="form-control" />
+					</div>
+					<br>
+					<div class="form-group">
+						<label th:if="${#fields.hasErrors('username')}"
+							th:errors="*{username}" class="validation-message"></label> <input
+							type="text" th:field="*{username}" placeholder="Username"
+							class="form-control" />
+					</div>
+					<br>
+					<div class="form-group">
+						<input type="text" th:field="*{email}" placeholder="Email"
+							class="form-control" /> <label
+							th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+							class="validation-message"></label>
+					</div>
+					<br>
+					<div class="form-group">
+						<input type="password" th:field="*{password}"
+							placeholder="Password" class="form-control" /> <label
+							th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+							class="validation-message"></label>
+					</div>
+					<br>
+					<div class="form-group">
+						<input type="number" th:field="*{age}" placeholder="age"
+							class="form-control" /> <label
+							th:if="${#fields.hasErrors('age')}" th:errors="*{age}"
+							class="validation-message">Must be older than 13!</label>
+					</div>
+					<br>
+					<div class="form-group">
+						<button class="btn btn-md btn-success btn-block" name="Submit"
+							value="Submit" type="Submit" th:text="Submit"></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

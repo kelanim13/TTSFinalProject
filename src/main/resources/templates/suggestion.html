@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<title>Suggestion</title>
+<div th:replace="/fragments/head"></div>
+<link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="container">
+		<div th:replace="fragments/navbar"></div>
+
+		<br>
+		<h2>Have Any Movie or TV Suggestions? We'd love to hear from you!</h2>
+		<br>
+		<form th:action="@{/suggestion}" th:object="${suggestion}"
+			method="post" autocomplete="off">
+
+			<p>
+				<input class="suggestion" type="text" th:field="*{content}" />
+			</p>
+			<label th:if="${#fields.hasErrors('content')}" th:errors="*{content}"
+				class="validation-message"></label>
+			<button th:action="@{/result}" class="btn btn-primary btn-md"
+				name="submit" type="submit" value="submit">Submit</button>
+
+		</form>
+
+		<br>
+	</div>
+</body>
+</html>

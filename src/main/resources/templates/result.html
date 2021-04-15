@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<title>Suggestion</title>
+<div th:replace="/fragments/head"></div>
+<link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="container">
+		<div th:replace="fragments/navbar"></div>
+
+		<br>
+		<h2>Thank you! We will take your suggestion into consideration!</h2>
+		<br>
+
+		<p class="result"
+			th:text="'Your Suggestion: ' + ${suggestion.content}" />
+		<form method="get" th:action="@{/suggestion}">
+			<button class="btn btn-primary btn-md" name="submit" type="submit"
+				value="submit">Submit another suggestion</button>
+		</form>
+
+		<br> <img class="moviepro" src="images/movie.gif"
+			alt="movie production" />
+
+	</div>
+</body>
+</html>

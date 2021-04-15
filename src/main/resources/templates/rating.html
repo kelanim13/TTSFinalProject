@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<title>Up-To-Date Ratings</title>
+<div th:replace="/fragments/head"></div>
+<link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div th:replace="fragments/navbar"></div>
+
+		<br><br>
+		<h2 class="trend">Movie and TV Ratings</h2>
+
+		<br>
+
+		<div class="container-fluid">
+			<input class="form-control me-2" type="search" id="input"
+				onkeyup="movieFilter()" placeholder="Search for movie titles"
+				title="Type in a movie title">
+		</div>
+
+		<br><br>
+
+		<div class="movie" id="title">
+			<table id="movie" class="table table-striped">
+				<tr class="table-light">
+					<th>Title</th>
+					<th>Director</th>
+					<th>Release Date</th>
+					<th>Rating</th>
+				</tr>
+				<tr>
+					<td>Godzilla vs. Kong</td>
+					<td>Adam Wingard</td>
+					<td>March 31, 2021</td>
+					<td>6.6/10</td>
+				</tr>
+				<tr>
+					<td>The Falcon and the Winter Soldier</td>
+					<td>Kari Skogland</td>
+					<td>March 19, 2021</td>
+					<td>8/10</td>
+				</tr>
+				<tr>
+					<td>Raya and the Last Dragon</td>
+					<td>Carlos López Estrada, Don Hall</td>
+					<td>March 5, 2021</td>
+					<td>8/10</td>
+				</tr>
+				<tr>
+					<td>Wandavision</td>
+					<td>Matt Shakman</td>
+					<td>January 15, 2021</td>
+					<td>8.1/10</td>
+				</tr>
+				<tr>
+					<td>Zoey's Extroadinary Playlist</td>
+					<td>John Terlesky</td>
+					<td>January 7, 2020</td>
+					<td>8.2/10</td>
+				</tr>
+				<tr>
+					<td>Soul</td>
+					<td>Peter Docter</td>
+					<td>December 25, 2020</td>
+					<td>8.1/10</td>
+				</tr>
+				<tr>
+					<td>News of the World</td>
+					<td>Paul Greengrass</td>
+					<td>December 25, 2020</td>
+					<td>6.8/10</td>
+				</tr>
+				<tr>
+					<td>Bridgerton</td>
+					<td>Julie Anne Robinson</td>
+					<td>December 25, 2020</td>
+					<td>7.2/10</td>
+				</tr>
+				<tr>
+					<td>Queen's Gambit</td>
+					<td>Scott Frank</td>
+					<td>October 23, 2020</td>
+					<td>8.6/10</td>
+				</tr>
+				<tr>
+					<td>The Trial of the Chicago 7</td>
+					<td>Aaron Sorkin</td>
+					<td>October 16, 2020</td>
+					<td>7.8/10</td>
+				</tr>
+				<tr>
+					<td>Tenet</td>
+					<td>Christopher Nolan</td>
+					<td>August 12, 2020</td>
+					<td>7.5/10</td>
+				</tr>
+				<tr>
+					<td>Knives Out</td>
+					<td>Rian Johnson</td>
+					<td>November 27, 2019</td>
+					<td>7.9/10</td>
+				</tr>
+				<tr>
+					<td>Parasite</td>
+					<td>Bong Joon-ho</td>
+					<td>October 5, 2019</td>
+					<td>8.6/10</td>
+				</tr>
+				<tr>
+					<td>Avengers: End Game</td>
+					<td>Joe Russo, Anthony Russo</td>
+					<td>April 26, 2019</td>
+					<td>8.4/10</td>
+				</tr>
+				<tr>
+					<td>Spider-Man: Into the Spider-Verse</td>
+					<td>Peter Ramsey et al.</td>
+					<td>December 14, 2018</td>
+					<td>8.4/10</td>
+				</tr>
+				<tr>
+					<td>New Amsterdam</td>
+					<td>Michael Slovis</td>
+					<td>November 21, 2018</td>
+					<td>8.1/10</td>
+				</tr>
+				<tr>
+					<td>Green Book</td>
+					<td>Peter Farrelly</td>
+					<td>November 21, 2018</td>
+					<td>8.2/10</td>
+				</tr>
+				<tr>
+					<td>A Star is Born</td>
+					<td>Bradley Cooper</td>
+					<td>October 5, 2018</td>
+					<td>7.6/10</td>
+				</tr>
+				<tr>
+					<td>Station 19</td>
+					<td>Bradley Beucker</td>
+					<td>March 22, 2018</td>
+					<td>6.6/10</td>
+				</tr>
+				<tr>
+					<td>9-1-1</td>
+					<td>Paris Barclay</td>
+					<td>January 3, 2018</td>
+					<td>7.7/10</td>
+				</tr>
+				<tr>
+					<td>Justice League</td>
+					<td>Zack Snyder, Joss Whedon</td>
+					<td>November 15, 2017</td>
+					<td>6.2/10</td>
+				</tr>
+				<tr>
+					<td>Atypical</td>
+					<td>Seth Gordon</td>
+					<td>August 11, 2017</td>
+					<td>8.3/10</td>
+				</tr>
+				<tr>
+					<td>Wonder Woman</td>
+					<td>Patty Jenkins</td>
+					<td>June 2, 2017</td>
+					<td>7.4/10</td>
+				</tr>
+				<tr>
+					<td>The Crown</td>
+					<td>Benjamin Caron</td>
+					<td>November 4, 2016</td>
+					<td>8.7/10</td>
+				</tr>
+				<tr>
+					<td>This Is Us</td>
+					<td>Ken Olin</td>
+					<td>September 20, 2016</td>
+					<td>8.7/10</td>
+				</tr>
+				<tr>
+					<td>Scorpion</td>
+					<td>Sam Hill</td>
+					<td>September 22, 2014</td>
+					<td>7.1/10</td>
+				</tr>
+				<tr>
+					<td>Divergent</td>
+					<td>Neil Burger</td>
+					<td>March 21, 2014</td>
+					<td>6.6/10</td>
+				</tr>
+				<tr>
+					<td>Silver Linings Playbook</td>
+					<td>David O. Russell</td>
+					<td>November 16, 2012</td>
+					<td>7.7/10</td>
+				</tr>
+				<tr>
+					<td>War Horse</td>
+					<td>Stephen Spielberg</td>
+					<td>December 25, 2011</td>
+					<td>7.2/10</td>
+				</tr>
+				<tr>
+					<td>Parenthood</td>
+					<td>Lawrence Trilling</td>
+					<td>March 2, 2010</td>
+					<td>8.2/10</td>
+				</tr>
+				<tr>
+					<td>The Pursuit of Happiness</td>
+					<td>Gabriel Muccino</td>
+					<td>December 15, 2006</td>
+					<td>8/10</td>
+				</tr>
+				<tr>
+					<td>Grey's Anatomy</td>
+					<td>Rob Corn</td>
+					<td>December 15, 2006</td>
+					<td>7.6/10</td>
+				</tr>
+				<tr>
+					<td>NCIS</td>
+					<td>Rocky Carroll</td>
+					<td>September 23, 2003</td>
+					<td>7.7/10</td>
+				</tr>
+				<tr>
+					<td>Criminal Minds</td>
+					<td>Glenn Kershaw</td>
+					<td>September 22, 2005</td>
+					<td>8.1/10</td>
+				</tr>
+				<tr>
+					<td>The Fast and The Furious</td>
+					<td>Rob Cohen</td>
+					<td>June 22, 2001</td>
+					<td>6.8/10</td>
+				</tr>
+				<tr>
+					<td>CSI: Crime Scene Investigation</td>
+					<td>Kenneth Fink</td>
+					<td>October 6, 2000</td>
+					<td>7.6/10</td>
+				</tr>
+				<tr>
+					<td>Gilmore Girls</td>
+					<td>Jamie Babbit</td>
+					<td>October 5, 2000</td>
+					<td>8.1/10</td>
+				</tr>
+				<tr>
+					<td>Law and Order SVU</td>
+					<td>David Platt</td>
+					<td>September 20, 1999</td>
+					<td>8/10</td>
+				</tr>
+				<tr>
+					<td>The Shawshank Redemption</td>
+					<td>Frank Darabont</td>
+					<td>September 22, 1994</td>
+					<td>7.9/10</td>
+				</tr>
+				<tr>
+					<td>Friends</td>
+					<td>Gary Halvorson</td>
+					<td>September 22, 1994</td>
+					<td>8.9/10</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<div class="card">
+				<div class="card-body">
+					<blockquote class="blockquote mb-0">
+						<p>"We must look a little closer. And when we do, we see that
+							the doughnut hole has a hole in its center. It is not a doughnut
+							hole, but a smaller doughnut with its own hole, and our doughnut
+							is not holed at all!"</p>
+						<footer class="blockquote-footer">
+							<br> <cite title="Source Title">Benoit Blanc: Knives
+								Out</cite>
+						</footer>
+					</blockquote>
+				</div>
+			</div>
+			<br><br>
+		</div>
+	</div>
+</body>
+</html>
+

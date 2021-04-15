@@ -1,0 +1,141 @@
+*
+{
+	margin: 0px; 
+	font-family: Copperplate; 
+}
+
+body
+{
+	background-color: #000;
+}
+
+h1,
+h2,
+.home,
+.movie,
+.star,
+.spider,
+.tv
+{
+	text-align: center;
+}
+
+
+h1,
+h2,
+td,
+.validation-message,
+.signup,
+.result
+{
+	color: #fff; 
+}
+
+.suggestion
+{
+	width: 100%;
+}
+
+.moviepro
+{
+	border-radius: 50%; 
+}
+
+img
+{
+	float: left; 
+	width: 500px; 
+	height: 500px; 	
+	object-fit: cover; 
+}
+
+
+.card-body
+{
+	background-color: #fff;
+}
+
+.card-header
+{
+  height: 40px;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    #000 10px,
+    #000 30px
+  ),
+  linear-gradient(
+    to bottom,
+    #fff,
+    #fff
+  )
+}
+
+.navbar
+{
+	border-radius: 5px; 
+}
+
+.btn
+{
+	background-color: white;
+	color: #000;
+}
+
+a
+{
+	background-color: #fff;
+}
+
+@media screen and (max-width: 250px)
+{
+.img-pop
+{
+	height: 250px; 
+	width: 250px;
+	transition: transform .2s;
+}
+}
+
+.img-pop:hover,
+.col-md-3:hover
+{
+  transform: scale(1.1);
+}
+
+.col-md-3
+{
+  display: inline-block;
+  margin-left:-4px;
+}
+
+.col-md-3 img
+{
+  width:100%;
+  height:auto;
+}
+
+
+.carousel-indicators li 
+{
+	visibility: hidden;
+}
+
+.carousel-indicators .active 
+{
+	visibility: hidden;
+}
+
+.card-text
+{
+	padding: 0; 
+	margin: 0; 
+}
+
+
+.card-img-top
+{
+	height: 500px; 
+	width: 500px; 
+}
